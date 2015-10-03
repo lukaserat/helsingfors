@@ -1,0 +1,13 @@
+{
+  "name": "dental-portal",
+  "description": "A Google Starter Project for Angularjs",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5",
+    "font-awesome-sass": "~4.4.0",
+    "moment": "~2.10.6",
+    "darmody-simple-ajax-uploader": "~1.0.0"
+  }
+}

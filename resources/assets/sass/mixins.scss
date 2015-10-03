@@ -1,0 +1,28 @@
+@mixin page-box() {
+  position: relative;
+  display: block;
+  width: 100%;
+  .container {
+    width: 1170px;
+
+    //@media screen and (max-width: $break-laptop) {
+    //  width: 100px;
+    //  float: none;
+    //}
+
+  }
+}
+
+@mixin animate-effect($seconds) {
+  transition: $seconds all;
+  -webkit-transition: $seconds all;
+  -moz-transition: $seconds all;
+  -o-transition: $seconds all;
+}
+
+
+@mixin no-underline() {
+  &:hover,&:focus {
+    text-decoration: none;
+  }
+}

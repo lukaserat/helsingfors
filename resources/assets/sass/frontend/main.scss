@@ -1,0 +1,239 @@
+// Any Bootstrap or FontAwesome-specific variables added here will overwrite the defaults.
+@import "variable-overrides";
+@import '../mixins';
+
+@import '../../../static/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap';
+@import '../../../static/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_mixins';
+//or @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import '../../../static/bower_components/font-awesome-sass/assets/stylesheets/font-awesome';
+
+// Front-end SCSS goes here.
+
+// Variables
+$headerBg               : #000000;
+$footerBg               : #000000;
+$linkHover              : #79A0DB;
+$linkFg                 : #FFFFFF;
+$bodyBg                 : #FFFFFF;
+$linkHoverBg            : #FFFFFF;
+
+// Breakins
+$break-mobile                     : 320px;
+$break-tablet                     : 768px;
+$break-desktop                    : 992px;
+$break-laptop                     : 1200px;
+
+// Mixins
+//@mixin relative($radius) {
+//  position: relative;
+//}
+
+
+
+
+// General Layout
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  background:#fff;
+  font-size: 100%;
+}
+
+body a {
+  @include animate-effect(0.5s);
+}
+
+header {
+  @include page-box;
+
+  position: relative;
+  background: $headerBg;
+  padding: 1.5% 0;
+  height: 130px;
+
+  .wrapper {
+    height: 90px;
+    position: relative;
+    vertical-align: top;
+  }
+
+}
+footer {
+
+  @include page-box;
+
+  background: $footerBg;
+  padding: 6% 0;
+  .footer-box {
+    .title {
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 8%;
+      text-transform: uppercase;
+    }
+  }
+
+  .footer-box {
+    .title {
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 8%;
+      text-transform: uppercase;
+    }
+    ul > li > a {
+      color: #B8B6B6;
+      font-size: 0.8125em;
+      text-decoration: none;
+      line-height: 2em;
+    }
+  }
+
+  .news-letter-wrapper {
+
+    .social-links {
+
+      margin-top: 10px;
+      position: relative;
+      display: block;
+      text-align: center;
+
+      ul > li > a {
+        color: #e2e2e2;
+        font-size: 19px;
+        text-decoration: none;
+        line-height: 2em;
+        &:hover {
+          color: #e2e2e2;
+          font-size: 19px;
+        }
+      }
+
+    }
+
+    .title {
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 8%;
+      text-transform: uppercase;
+    }
+
+    .input-group {
+      input {
+        padding: 20px 15px;
+        outline: none;
+        border: none;
+        color: #202020;
+        background: #fff;
+        line-height: 1.5em;
+        font-size: 0.8125em;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+
+        //.border-right-radius(0px);
+        //.border-left-radius(0px);
+      }
+      .input-group-btn {
+        button {
+          background: #c7c7c7;
+          padding: 9px 19px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          line-height: 1.6em;
+          color: #000;
+          font-weight: 800;
+          @include animate-effect(0.3s);
+          border-bottom-right-radius: 0px;
+          border-top-right-radius: 0px;
+          &:hover {
+            background: #222;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+
+  }
+
+}
+
+.logo-wrapper {
+  img {
+    position: relative;
+    padding-top: 17px;
+  }
+}
+
+.nav-wrapper {
+  margin-left: 40px;
+
+  ul {
+    margin-top: 46px;
+    li > a {
+      font-size: 0.8125em;
+      font-weight: 600;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      color: $linkFg;
+      &:hover {
+        color: $linkHover;
+        background: $linkHoverBg;
+        text-decoration: none;
+      }
+    }
+  }
+
+}
+
+.social-wrapper {
+  .first-layer {
+    padding-top: 8px;
+    .dropdown >  a {
+      color: $linkFg;
+      font-size: 13px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .booking-link {
+      font-size: 0.8125em;
+      color: #FFF;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .second-layer {
+    padding-top: 10px;
+    a {
+      > .fa {
+        color: #e2e2e2;
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+.slider-wrapper {
+  @include page-box;
+}
+
+.body-wrapper {
+  @include page-box;
+}
+
+.box-trip-advisor {
+  text-align: center;
+  position: relative;
+  border: 1px solid #589446;
+  padding: 1px;
+  display: block;
+  margin: 20px auto 0;
+  max-width: 140px;
+}

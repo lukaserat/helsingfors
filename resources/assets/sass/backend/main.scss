@@ -1,0 +1,77 @@
+// Any Bootstrap or FontAwesome-specific variables added here will overwrite the defaults.
+@import "variable-overrides";
+@import '../mixins';
+
+@import '../../../static/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap';
+@import '../../../static/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_mixins';
+//or @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import '../../../static/bower_components/font-awesome-sass/assets/stylesheets/font-awesome';
+
+// Back-end SCSS goes here.
+
+// General Layout
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  background:#fff;
+  font-size: 100%;
+}
+
+body a {
+  @include animate-effect(0.5s);
+}
+
+.body-wrapper {
+
+  background: #f8f8f8;
+
+  .page-header {
+    font-size: 1.6em;
+  }
+
+  .form-control[type=text], textarea.form-control {
+    border: none;
+    border-radius: 0px;
+    background: #fff;
+    color: #202020;
+    padding: 4px 8px;
+    outline: none;
+  }
+
+}
+
+header {
+  padding: 10px 15px;
+  background: #000;
+  margin-bottom: 10px;
+
+  .site-name {
+    font-size: 1.80em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .nav-wrapper {
+    position: relative;
+    margin-top: 20px;
+
+    ul > li > a {
+      font-size: 0.78em;
+      padding: 8px 12px;
+      color: #fff;
+      display: block;
+      text-transform: uppercase;
+
+      @include no-underline;
+      &:hover {
+        background: #8c8c8c;
+      }
+    }
+
+  }
+}
+
+footer {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding: 10px 15px;
+}
