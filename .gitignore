@@ -3,7 +3,5 @@
 Homestead.yaml
 Homestead.json
 .env
-public/build
-public/images
 public/revslider
 www.helsingfors.com.ar
