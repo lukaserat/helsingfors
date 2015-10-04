@@ -65,7 +65,7 @@
 }
 
 @mixin equal-children($container) {
-  ".#{$container}" {
+  .form-group {
     width: 49%;
     &:first-child {
       margin-right: 1%;

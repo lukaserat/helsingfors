@@ -8293,11 +8293,11 @@ footer {
       width: 100%; }
   .booking-form-wrapper .first-line {
     margin-bottom: 10px; }
-    .booking-form-wrapper .first-line ".#{$container}" {
+    .booking-form-wrapper .first-line .form-group {
       width: 49%; }
-      .booking-form-wrapper .first-line ".#{$container}":first-child {
+      .booking-form-wrapper .first-line .form-group:first-child {
         margin-right: 1%; }
-      .booking-form-wrapper .first-line ".#{$container}":last-child {
+      .booking-form-wrapper .first-line .form-group:last-child {
         margin-left: 1%; }
   .booking-form-wrapper .second-line {
     margin-bottom: 10px; }
@@ -8305,11 +8305,11 @@ footer {
       display: inline-block;
       vertical-align: top;
       width: 40%; }
-      .booking-form-wrapper .second-line .group ".#{$container}" {
+      .booking-form-wrapper .second-line .group .form-group {
         width: 49%; }
-        .booking-form-wrapper .second-line .group ".#{$container}":first-child {
+        .booking-form-wrapper .second-line .group .form-group:first-child {
           margin-right: 1%; }
-        .booking-form-wrapper .second-line .group ".#{$container}":last-child {
+        .booking-form-wrapper .second-line .group .form-group:last-child {
           margin-left: 1%; }
       .booking-form-wrapper .second-line .group:first-child {
         width: 58%;
