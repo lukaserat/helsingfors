@@ -1,7 +1,11 @@
-@mixin page-box() {
+@mixin content-box() {
   position: relative;
   display: block;
   width: 100%;
+}
+
+@mixin page-box() {
+  @include content-box;
   .container {
     width: 1170px;
 
@@ -20,9 +24,54 @@
   -o-transition: $seconds all;
 }
 
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;
+}
 
 @mixin no-underline() {
   &:hover,&:focus {
     text-decoration: none;
+  }
+}
+
+@mixin wait-display() {
+  opacity: 0;
+  &.active {
+    opacity: 1;
+  }
+}
+
+@mixin image-sprite($position) {
+  background: url("images/img-sprite.png") $position !important;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin equal-children($container) {
+  ".#{$container}" {
+    width: 49%;
+    &:first-child {
+      margin-right: 1%;
+    }
+    &:last-child {
+      margin-left: 1%;
+    }
   }
 }

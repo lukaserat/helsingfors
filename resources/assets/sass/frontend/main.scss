@@ -16,6 +16,8 @@ $linkHover              : #79A0DB;
 $linkFg                 : #FFFFFF;
 $bodyBg                 : #FFFFFF;
 $linkHoverBg            : #FFFFFF;
+$colorBlue              : #428bca;
+$textColor              : #333333;
 
 // Breakins
 $break-mobile                     : 320px;
@@ -222,10 +224,225 @@ footer {
 
 .slider-wrapper {
   @include page-box;
+  @include wait-display;
+  .tp-banner{
+    @include content-box;
+
+    // Layer Styles
+    .tp-caption {
+      &.main-caption {
+        font-size: 3.3em;
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 1.3em;
+        color: #fff;
+        &.with-color {
+          padding: 8px 12px;
+        }
+        &.orange {
+          color: #FFF;
+          background: #a04606;
+        }
+      }
+      &.description {
+        font-size: 0.98em;
+        padding: 8px;
+        background: #fff;
+        color: #000;
+      }
+    }
+
+  }
+}
+
+.page-title {
+  padding-left: 20px;
+  padding-top: 20px;
+  h1 {
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 1.7em;
+    color: #999;
+  }
+}
+
+.activities-wrapper {
+  @include page-box;
+  padding-bottom: 20px;
+
+  .title {
+    color: #00527e;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .item-wrapper {
+    position: relative;
+    display: block;
+
+    > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .img-wrapper {
+
+      overflow: hidden;
+      @include page-box;
+
+      > .mask {
+        display: block;
+        position: absolute;
+        width: 125%;
+        height: 125%;
+        background: rgba(0,82,126,0.5);
+        @include animate-effect(0.3s ease-in-out 0.6s);
+        right: 0px;
+        left: auto;
+
+        @include transform-origin(100% 0%);
+        @include transition-delay(0s);
+
+        &.mask-2 {
+          top:-125%;
+          bottom: auto;
+          left: 0px;
+          right: auto;
+          @include transform-origin(0% 100%);
+        }
+
+      }
+
+      &:hover {
+
+        > .mask {
+          @include transform(rotate(33.5deg) translateX(1px));
+          &.mask-2 {
+            @include transform(rotate(33.5deg) translateX(-1px));
+          }
+        }
+
+        > .caption-wrapper {
+          @include transform(rotate(0deg) translatey(0px));
+        }
+
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+      > .caption-wrapper {
+        display: block;
+        width: 100%;
+        position: absolute;
+        @include animate-effect(0.3s ease-in-out 0.6s);
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+
+        @include transition-delay(0.3s);
+        @include transform(rotate(-40deg) translatey(300px));
+
+        opacity: 0.8;
+        > h2, > p {
+          display: block;
+          width: 100%;
+          color: #fff;
+          text-align: center;
+          position: relative;
+          padding: 10px;
+          font-size: 0.78em;
+        }
+        > h2 {
+          border-bottom: 1px solid rgba(255,255,255,.2);
+          text-transform: uppercase;
+          font-size: 0.86em;
+          margin: 5px 0 0;
+        }
+      }
+    }
+    .caption-wrapper {
+      > h2 {
+        color: $colorBlue;
+        font-size: 1.2em;
+        line-height: 1.3em;
+      }
+      > p {
+        font-size: 0.92em;
+        color: $textColor;
+      }
+    }
+  }
+}
+
+.booking-form-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  margin-left: -48px;
+  padding: 14px;
+  background: #F4F4F4;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px #696969;
+  form > p {
+    color: $colorBlue;
+  }
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0px;
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .first-line {
+    margin-bottom: 10px;
+    @include equal-children('.form-group');
+  }
+  .second-line {
+    margin-bottom: 10px;
+    .group {
+      display: inline-block;
+      @include equal-children('.form-group');
+      vertical-align: top;
+      width: 40%;
+      &:first-child {
+        width: 58%;
+        margin-right: 1%;
+      }
+      &:last-child {
+        margin-left: 1%;
+        .form-group:last-child {
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+.testimonials-wrapper {
+  background: #F1F2F2;
+  @include page-box;
+  padding: 16px 0px;
 }
 
 .body-wrapper {
   @include page-box;
+  padding-top: 10px;
+
+  .text-content {
+    margin-bottom: 10px;
+    @include page-box;
+    color: $textColor;
+  }
+
 }
 
 .box-trip-advisor {
@@ -237,3 +454,9 @@ footer {
   margin: 20px auto 0;
   max-width: 140px;
 }
+
+
+// Customize rev slider
+//.tp-leftarrow.default {
+//  @include image-sprite(-10px -243px);
+//}

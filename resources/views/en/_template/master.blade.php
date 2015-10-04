@@ -11,8 +11,19 @@
     @yield('meta')
 
     @yield('before-styles-end')
+    <!-- SITE CSS -->
     {!! HTML::style(elixir('css/frontend.css')) !!}
     @yield('after-styles-end')
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{asset('js/vendor/jquery.min.js')}}"><\/script>')</script>
+
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    {!! HTML::script('rs-plugin/js/jquery.themepunch.plugins.min.js') !!}
+    {!! HTML::script('rs-plugin/js/jquery.themepunch.revolution.min.js') !!}
+
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    {!! HTML::style('rs-plugin/css/settings.css') !!}
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -32,9 +43,9 @@
     @yield('content')
     @include('en._template.footer')
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{asset('js/vendor/jquery.min.js')}}"><\/script>')</script>
     {!! HTML::script('js/vendor/bootstrap.min.js') !!}
+
+
 
     @yield('before-scripts-end')
     {!! HTML::script(elixir('js/frontend.js')) !!}

@@ -9,6 +9,7 @@ elixir(function(mix) {
     .copy('resources/static/bower_components/jquery/dist/jquery.min.js', 'public/js/vendor')
     .copy('resources/static/bower_components/darmody-simple-ajax-uploader/SimpleAjaxUploader.js', 'public/js/vendor')
     .copy('resources/static/bower_components/moment/min', 'public/js/vendor/moment')
+    .copy('resources/static/images', 'public/images')
 
     .sass([ // Process front-end stylesheets
       'frontend/main.scss'
@@ -16,6 +17,9 @@ elixir(function(mix) {
     .styles([  // Combine pre-processed CSS files
       'frontend/main.css'
     ], 'public/css/frontend.css')
+    .coffee([
+      'frontend/main.coffee',
+    ], 'resources/assets/js/frontend/main.js')
     .scripts([ // Combine front-end scripts
       'plugins.js',
       'frontend/main.js'
