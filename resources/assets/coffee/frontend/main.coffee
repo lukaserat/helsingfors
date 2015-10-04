@@ -15,3 +15,13 @@ jQuery(document).ready ->
 
   jQuery('.activities-wrapper .img-wrapper').each f1
 
+
+  # Testimonials carousel
+  if jQuery('#testimonials-carousel').length > 0
+    jQuery('#testimonials-carousel').carousel()
+    f1 = ()->
+      $(@).on 'click', ()->
+        jQuery('#testimonials-carousel').carousel($(@).data('slideTo'))
+
+    jQuery('#testimonials-carousel').find('.carousel-indicators > li').each f1
+

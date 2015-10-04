@@ -161,18 +161,7 @@
 
         </div>
 
-
-        <div class="testimonials-wrapper">
-
-            <div class="container">
-
-                <div class="col-xs-4 col-xs-offset-4">
-                    <img src="{{asset('images/trip-advisor.png')}}" alt="TripAdvisor" title="TripAdvisor" class="t_advisory img-responsive">
-                </div>
-
-            </div>
-
-        </div>
+        @include('en._partials.testimonials')
 
     </div>
 
@@ -185,7 +174,9 @@
 
         jQuery(document).ready(function() {
 
-            jQuery('.tp-banner').parent().addClass('active');
+            jQuery('.tp-banner').each(function(){
+                $(this).parent().addClass('active');
+            });
 
             revapi = jQuery('.tp-banner').revolution(
                 {

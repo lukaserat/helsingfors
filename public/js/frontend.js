@@ -78,7 +78,16 @@ $(function(){
         top: x / 2
       });
     };
-    return jQuery('.activities-wrapper .img-wrapper').each(f1);
+    jQuery('.activities-wrapper .img-wrapper').each(f1);
+    if (jQuery('#testimonials-carousel').length > 0) {
+      jQuery('#testimonials-carousel').carousel();
+      f1 = function() {
+        return $(this).on('click', function() {
+          return jQuery('#testimonials-carousel').carousel($(this).data('slideTo'));
+        });
+      };
+      return jQuery('#testimonials-carousel').find('.carousel-indicators > li').each(f1);
+    }
   });
 
 }).call(this);

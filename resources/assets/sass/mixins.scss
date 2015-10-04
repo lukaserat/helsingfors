@@ -18,10 +18,10 @@
 }
 
 @mixin animate-effect($seconds) {
-  transition: $seconds all;
-  -webkit-transition: $seconds all;
-  -moz-transition: $seconds all;
-  -o-transition: $seconds all;
+  transition: all $seconds;
+  -webkit-transition: all $seconds;
+  -moz-transition: all $seconds;
+  -o-transition: all $seconds;
 }
 
 @mixin transition-delay($delay) {

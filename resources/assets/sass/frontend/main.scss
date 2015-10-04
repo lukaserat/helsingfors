@@ -222,37 +222,34 @@ footer {
   }
 }
 
-.slider-wrapper {
-  @include page-box;
-  @include wait-display;
-  .tp-banner{
-    @include content-box;
+// Revolution Slider
+.tp-banner{
+  @include content-box;
 
-    // Layer Styles
-    .tp-caption {
-      &.main-caption {
-        font-size: 3.3em;
-        text-transform: uppercase;
-        font-weight: 800;
-        line-height: 1.3em;
-        color: #fff;
-        &.with-color {
-          padding: 8px 12px;
-        }
-        &.orange {
-          color: #FFF;
-          background: #a04606;
-        }
+  // Layer Styles
+  .tp-caption {
+    &.main-caption {
+      font-size: 3.3em;
+      text-transform: uppercase;
+      font-weight: 800;
+      line-height: 1.3em;
+      color: #fff;
+      &.with-color {
+        padding: 8px 12px;
       }
-      &.description {
-        font-size: 0.98em;
-        padding: 8px;
-        background: #fff;
-        color: #000;
+      &.orange {
+        color: #FFF;
+        background: #a04606;
       }
     }
-
+    &.description {
+      font-size: 0.98em;
+      padding: 8px;
+      background: #fff;
+      color: #000;
+    }
   }
+
 }
 
 .page-title {
@@ -427,10 +424,63 @@ footer {
   }
 }
 
+.slider-wrapper {
+  @include page-box;
+  @include wait-display;
+}
+
 .testimonials-wrapper {
   background: #F1F2F2;
   @include page-box;
   padding: 16px 0px;
+
+  .carousel-inner {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    > .carousel-indicators {
+      bottom: -10px;
+      > li {
+        border-color: #A24600;
+        &.active {
+          background: #A24600;
+        }
+      }
+    }
+
+    > .item {
+      position: relative;
+      @include animate-effect(0.3s);
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+      }
+
+      > p {
+        font-size: 1.725rem;
+        color: #8f8f8f;
+        text-align: center;
+        position: relative;
+        text-indent: 20px;
+        line-height: 1.9rem;
+        &:before {
+          content: '\201C';
+          font-family: "Georgia", serif;
+          font-size: 4.8rem;
+          position: relative;
+          margin-right: 10px;
+          margin-top: -25px;
+          top: 25px;
+        }
+      }
+      > small {
+        font-size: 1rem;
+        display: block;
+      }
+    }
+
+  }
 }
 
 .body-wrapper {
