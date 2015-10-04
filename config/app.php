@@ -153,7 +153,7 @@ return [
          */
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         HieuLe\Active\ActiveServiceProvider::class,
-        Laracasts\Utilities\JavaScript\JavascriptServiceProvider::class,
+        Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class,
 
 
     ],
