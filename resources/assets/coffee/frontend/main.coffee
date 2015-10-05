@@ -1,27 +1,87 @@
 jQuery(document).ready ->
 
-  fn1 = ()->
-    $img = $(@).find('.img-wrapper')
+  $ = jQuery
+
+  window.BOOKING_DATE =
+    startDate: moment()
+    endDate: moment()
+
+  # Booking response
+  if $('[name="booking-response"]').length > 0
+    fn = ()->
+      opts =
+        scrollTop: $('[name="booking-response"]').offset().top
+      $('html, body').animate(opts, 500)
+    setTimeout fn, 200
 
 
-  fn2 = ()->
+  # Booking Calendar Input
+  f1 = ()->
+    $calendar = $(@).parent().siblings('.calendar-object').children('.clndr')
+    $('.calendar-object .clndr').removeClass('active')
+    f2 = ()-> $calendar.addClass('active')
+    setTimeout f2, 10
+    $calendar.on 'mouseleave', ()-> $calendar.removeClass('active')
 
-  jQuery('.activities-wrapper .item-wrapper').hover fn1, fn2
+  if $('input.calendar').length > 0
+    $('input.calendar').each ()-> $(@).on('click', f1)
 
+    $('.calendar-object').each ()->
+
+      cellClick = (target)->
+        $element = $(target.element)
+        $parent = $(target.element).parents('.calendar-object')
+        if not $element.hasClass 'past'
+          if $parent.hasClass('cal1')
+            BOOKING_DATE.startDate = target.date
+            $('input[name="in_date"]').val(target.date.format('YYYY-MM-DD'))
+          if $parent.hasClass('cal2')
+            BOOKING_DATE.endDate = target.date
+            $('input[name="out_date"]').val(target.date.format('YYYY-MM-DD'))
+          $parent.children('.clndr').removeClass('active')
+
+      opts =
+        template: $('#template-calendar').html()
+        events: []
+        daysOfTheWeek: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+        numberOfRows: 5
+        clickEvents:
+          click: cellClick
+      $(@).clndr opts
+
+  # Page Slider
+  if $('.tp-banner').length > 0 and $tpBanner = $('.tp-banner')
+    $tpBanner.each ()->
+      $(@).parent().addClass('active')
+      opt =
+        delay:9000,
+        startwidth:1170,
+        startheight:500,
+        hideThumbs:10,
+        fullWidth:"on",
+        fullScreenAlignForce:"on",
+        forceFullWidth:"on",
+        spinned:"spinner4",
+        onHoverStop:"on",
+        navigationType: 'none'
+      $(@).revolution opt
+
+  # Activities
   f1 = ()->
     $y = $(@).find('.caption-wrapper')
     x = $(@).outerHeight() - $y.outerHeight()
     $y.css { top: x/2 }
 
-  jQuery('.activities-wrapper .img-wrapper').each f1
+  if $('.activities-wrapper .img-wrapper').length > 0
+    $('.activities-wrapper .img-wrapper').each f1
 
 
   # Testimonials carousel
-  if jQuery('#testimonials-carousel').length > 0
-    jQuery('#testimonials-carousel').carousel()
+  if $('#testimonials-carousel').length > 0
+    $('#testimonials-carousel').carousel()
     f1 = ()->
-      $(@).on 'click', ()->
-        jQuery('#testimonials-carousel').carousel($(@).data('slideTo'))
+     $$(@).on 'click', ()->
+        $('#testimonials-carousel').carousel($(@).data('slideTo'))
 
-    jQuery('#testimonials-carousel').find('.carousel-indicators > li').each f1
+    $('#testimonials-carousel').find('.carousel-indicators > li').each f1
 

@@ -9,6 +9,9 @@ elixir(function(mix) {
     .copy('resources/static/bower_components/jquery/dist/jquery.min.js', 'public/js/vendor')
     .copy('resources/static/bower_components/darmody-simple-ajax-uploader/SimpleAjaxUploader.js', 'public/js/vendor')
     .copy('resources/static/bower_components/moment/min', 'public/js/vendor/moment')
+    .copy('resources/static/bower_components/clndr/clndr.min.js', 'public/js/vendor/clndr')
+    .copy('resources/static/bower_components/clndr/example/styles/clndr.css', 'public/js/vendor/clndr')
+    .copy('resources/static/bower_components/underscore/underscore-min.js', 'public/js/vendor')
     .copy('resources/static/images', 'public/images')
 
     .sass([ // Process front-end stylesheets

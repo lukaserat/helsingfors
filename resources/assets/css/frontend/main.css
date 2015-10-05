@@ -8007,6 +8007,111 @@ button.close {
 .fa-fonticons:before {
   content: ""; }
 
+.calendar-object {
+  position: relative;
+  display: block;
+  width: 100%;
+  width: 340px;
+  font-size: 0.9rem; }
+  .calendar-object .clndr {
+    transition: all 0.3s ease-in-out 0.5s;
+    -webkit-transition: all 0.3s ease-in-out 0.5s;
+    -moz-transition: all 0.3s ease-in-out 0.5s;
+    -o-transition: all 0.3s ease-in-out 0.5s;
+    position: relative;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    height: 0px;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    transition-delay: 0s;
+    position: absolute;
+    z-index: 10;
+    top: 4px;
+    border-bottom: 7px solid #69a776;
+    background: #ddd; }
+    .calendar-object .clndr.active {
+      opacity: 1;
+      height: auto;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px); }
+  .calendar-object .clndr-controls {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #69A776; }
+    .calendar-object .clndr-controls > div {
+      width: 30%;
+      display: inline-block;
+      text-align: center;
+      padding: 8px 0px;
+      color: #fff;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s; }
+      .calendar-object .clndr-controls > div:hover {
+        background: #528b5e;
+        cursor: pointer; }
+    .calendar-object .clndr-controls > .month-bar {
+      width: 40%;
+      background: #487b53; }
+      .calendar-object .clndr-controls > .month-bar:hover {
+        background: #487b53; }
+  .calendar-object .clndr-grid, .calendar-object .clndr-today-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s; }
+  .calendar-object .clndr-today-button {
+    display: inline-block;
+    width: 14.28571%;
+    padding: 8px 0;
+    text-align: center;
+    width: 100%; }
+  .calendar-object .clndr-grid > .days-of-the-week {
+    position: relative;
+    display: block;
+    width: 100%; }
+    .calendar-object .clndr-grid > .days-of-the-week > .header-day {
+      background: #97ce7f;
+      display: inline-block;
+      width: 14.28571%;
+      padding: 8px 0;
+      text-align: center; }
+  .calendar-object .clndr-grid .days {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #ebebeb; }
+    .calendar-object .clndr-grid .days > .day {
+      display: inline-block;
+      width: 14.28571%;
+      padding: 8px 0;
+      text-align: center;
+      color: #212121;
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s; }
+      .calendar-object .clndr-grid .days > .day:not(.past):hover {
+        background: #97ce7f; }
+      .calendar-object .clndr-grid .days > .day.today {
+        background: #fff;
+        color: #333; }
+    .calendar-object .clndr-grid .days > .adjacent-month {
+      background: #dedede;
+      color: rgba(0, 0, 0, 0.3); }
+    .calendar-object .clndr-grid .days > .past {
+      color: rgba(0, 0, 0, 0.3); }
+
 html, body {
   font-family: 'Open Sans', sans-serif;
   background: #fff;
@@ -8304,7 +8409,7 @@ footer {
     .booking-form-wrapper .second-line .group {
       display: inline-block;
       vertical-align: top;
-      width: 40%; }
+      width: 37%; }
       .booking-form-wrapper .second-line .group .form-group {
         width: 49%; }
         .booking-form-wrapper .second-line .group .form-group:first-child {
@@ -8312,10 +8417,10 @@ footer {
         .booking-form-wrapper .second-line .group .form-group:last-child {
           margin-left: 1%; }
       .booking-form-wrapper .second-line .group:first-child {
-        width: 58%;
+        width: 62%;
         margin-right: 1%; }
       .booking-form-wrapper .second-line .group:last-child {
-        margin-left: 1%; }
+        margin-left: 0%; }
         .booking-form-wrapper .second-line .group:last-child .form-group:last-child {
           padding-left: 4px; }
 
@@ -8334,20 +8439,21 @@ footer {
   position: relative;
   display: block;
   width: 100%;
-  padding: 16px 0px; }
+  padding: 26px 0px; }
   .testimonials-wrapper .container {
     width: 1170px; }
+  .testimonials-wrapper .trip-advisor {
+    display: block;
+    text-align: center; }
+    .testimonials-wrapper .trip-advisor .img-wrapper {
+      width: 320px;
+      margin: 0px auto; }
   .testimonials-wrapper .carousel-inner {
     padding-top: 20px;
     padding-bottom: 50px; }
-    .testimonials-wrapper .carousel-inner > .carousel-indicators {
-      bottom: -10px; }
-      .testimonials-wrapper .carousel-inner > .carousel-indicators > li {
-        border-color: #A24600; }
-        .testimonials-wrapper .carousel-inner > .carousel-indicators > li.active {
-          background: #A24600; }
     .testimonials-wrapper .carousel-inner > .item {
       position: relative;
+      text-align: center;
       transition: all 0.3s;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
@@ -8361,7 +8467,7 @@ footer {
         text-align: center;
         position: relative;
         text-indent: 20px;
-        line-height: 1.9rem; }
+        line-height: 2.2rem; }
         .testimonials-wrapper .carousel-inner > .item > p:before {
           content: '\201C';
           font-family: "Georgia", serif;
@@ -8398,5 +8504,22 @@ footer {
   display: block;
   margin: 20px auto 0;
   max-width: 140px; }
+
+.booking-response-wrapper {
+  position: relative;
+  display: block;
+  width: 100%; }
+  .booking-response-wrapper .container {
+    width: 1170px; }
+  .booking-response-wrapper.error {
+    background: #F96B4B; }
+  .booking-response-wrapper.success {
+    background: #9CC96B; }
+  .booking-response-wrapper h3 {
+    font-size: 1.2rem;
+    margin: 0px;
+    text-align: center;
+    padding: 18px 10px;
+    color: #F1F2F2; }
 
 /*# sourceMappingURL=main.css.map */

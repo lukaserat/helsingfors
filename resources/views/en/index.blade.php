@@ -4,6 +4,8 @@
 
     @include('en._partials.slider')
 
+    @include('en._partials.booking-prompt')
+
     <div class="body-wrapper">
         <div class="container">
 
@@ -15,33 +17,35 @@
                     </div>
                     <div class="col-xs-6">
                         <div class="booking-form-wrapper">
-                            {!! Form::open() !!}
+                            {!! Form::open(['route'=>'booking.create']) !!}
 
                             <p>Check availability for your <strong>booking</strong> <span class="glyphicon glyphicon-tags"></span></p>
 
                             <div class="first-line">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name and Surname">
-                                </div><div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email">
+                                <div class="form-group @if($errors->has('name')) has-error @endif">
+                                    <input name="name" type="text" class="form-control" placeholder="Name and Surname">
+                                </div><div class="form-group @if($errors->has('email')) has-error @endif">
+                                    <input name="email" type="text" class="form-control" placeholder="Email">
                                 </div>
                             </div>
                             <div class="second-line">
                                 <div class="group">
-                                    <div class="form-group">
+                                    <div class="form-group @if($errors->has('in_date')) has-error @endif">
                                         <div class="input-group">
                                             <span class="input-group-addon">IN</span>
-                                            <input type="text" class="form-control" placeholder="YYYY/MM/DD">
+                                            <input name="in_date" type="text" class="calendar form-control" placeholder="YYYY/MM/DD">
                                         </div>
-                                    </div><div class="form-group">
+                                        <div class="cal1 calendar-object"></div>
+                                    </div><div class="form-group @if($errors->has('out_date')) has-error @endif">
                                         <div class="input-group">
                                             <span class="input-group-addon">OUT</span>
-                                            <input type="text" class="form-control" placeholder="YYYY/MM/DD">
+                                            <input name="out_date" type="text" class="calendar form-control" placeholder="YYYY/MM/DD">
                                         </div>
+                                        <div class="cal2 calendar-object"></div>
                                     </div>
                                 </div><div class="group">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="# Passengers">
+                                    <div class="form-group @if($errors->has('num_passengers')) has-error @endif">
+                                        <input name="num_passengers" type="text" class="form-control" placeholder="# Passengers">
                                     </div><div class="form-group">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
@@ -167,31 +171,25 @@
 
 @endsection
 
+@section('before-scripts-end')
+    {!! HTML::script('js/vendor/clndr/clndr.min.js') !!}
+@endsection
+
 @section('after-scripts-end')
-    <script type="text/javascript">
 
-        var revapi;
+<script type="text/template" id="template-calendar">
+    <div class="clndr-controls">
+        <div class="clndr-previous-button"><%= moment(month +'-'+ year, 'MMMM-YYYY').subtract(1, 'month').format('MMMM') %>
+        </div><div class="month-bar"><%= month %>
+        </div><div class="clndr-next-button"><%= moment(month +'-'+ year, 'MMMM-YYYY').add(1, 'month').format('MMMM') %></div>
+    </div>
+    <div class="clndr-grid">
+        <div class="days-of-the-week">
+            <% _.each(daysOfTheWeek, function(day) { %><div class="header-day"><%= day %></div><% }); %>
+            <div class="days"><% _.each(days, function(day) { %><div class="<%= day.classes %>"><%= day.day %></div><% }); %></div>
+        </div>
+    </div>
+    <div class="clndr-today-button">Today</div>
+</script>
 
-        jQuery(document).ready(function() {
-
-            jQuery('.tp-banner').each(function(){
-                $(this).parent().addClass('active');
-            });
-
-            revapi = jQuery('.tp-banner').revolution(
-                {
-                    delay:9000,
-                    startwidth:1170,
-                    startheight:500,
-                    hideThumbs:10,
-                    fullWidth:"on",
-                    fullScreenAlignForce:"on",
-                    forceFullWidth:"on",
-                    spinned:"spinner4",
-                    onHoverStop:"on"
-                });
-
-        });	//ready
-
-    </script>
 @stop

@@ -7,6 +7,9 @@
 //or @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import '../../../static/bower_components/font-awesome-sass/assets/stylesheets/font-awesome';
 
+
+@import 'calendar';
+
 // Front-end SCSS goes here.
 
 // Variables
@@ -409,13 +412,13 @@ footer {
       display: inline-block;
       @include equal-children('.form-group');
       vertical-align: top;
-      width: 40%;
+      width: 37%;
       &:first-child {
-        width: 58%;
+        width: 62%;
         margin-right: 1%;
       }
       &:last-child {
-        margin-left: 1%;
+        margin-left: 0%;
         .form-group:last-child {
           padding-left: 4px;
         }
@@ -432,24 +435,34 @@ footer {
 .testimonials-wrapper {
   background: #F1F2F2;
   @include page-box;
-  padding: 16px 0px;
+  padding: 26px 0px;
+
+  .trip-advisor {
+    display: block;
+    text-align: center;
+    .img-wrapper {
+      width: 320px;
+      margin: 0px auto;
+    }
+  }
 
   .carousel-inner {
     padding-top: 20px;
     padding-bottom: 50px;
 
-    > .carousel-indicators {
-      bottom: -10px;
-      > li {
-        border-color: #A24600;
-        &.active {
-          background: #A24600;
-        }
-      }
-    }
+    //> .carousel-indicators {
+    //  bottom: -10px;
+    //  > li {
+    //    border-color: #A24600;
+    //    &.active {
+    //      background: #A24600;
+    //    }
+    //  }
+    //}
 
     > .item {
       position: relative;
+      text-align: center;
       @include animate-effect(0.3s);
       opacity: 0;
 
@@ -463,7 +476,7 @@ footer {
         text-align: center;
         position: relative;
         text-indent: 20px;
-        line-height: 1.9rem;
+        line-height: 2.2rem;
         &:before {
           content: '\201C';
           font-family: "Georgia", serif;
@@ -505,6 +518,23 @@ footer {
   max-width: 140px;
 }
 
+
+.booking-response-wrapper {
+  @include page-box;
+  &.error {
+    background: #F96B4B;
+  }
+  &.success {
+    background: #9CC96B;
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin: 0px;
+    text-align: center;
+    padding: 18px 10px;
+    color: #F1F2F2;
+  }
+}
 
 // Customize rev slider
 //.tp-leftarrow.default {

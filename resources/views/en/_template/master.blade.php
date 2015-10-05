@@ -44,7 +44,8 @@
     @include('en._template.footer')
 
     {!! HTML::script('js/vendor/bootstrap.min.js') !!}
-
+    {!! HTML::script('js/vendor/underscore-min.js') !!}
+    {!! HTML::script('js/vendor/moment/moment-with-locales.min.js') !!}
 
 
     @yield('before-scripts-end')

@@ -2,8 +2,8 @@
 
     <div class="container">
 
-        <div class="row">
-            <div class="col-xs-4 col-xs-offset-4">
+        <div class="trip-advisor">
+            <div class="img-wrapper">
                 <img src="{{asset('images/trip-advisor.png')}}" alt="TripAdvisor" title="TripAdvisor" class="t_advisory img-responsive">
             </div>
         </div>
@@ -48,14 +48,14 @@
                         <small>Dwendell - San Francisco, California</small>
                     </div>
 
-                    <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0" data-target="#testimonials-carousel"></li>
-                        <li data-slide-to="1" data-target="#testimonials-carousel"></li>
-                        <li data-slide-to="2" data-target="#testimonials-carousel"></li>
-                        <li data-slide-to="3" data-target="#testimonials-carousel"></li>
-                        <li data-slide-to="4" data-target="#testimonials-carousel"></li>
-                        <li data-slide-to="5" data-target="#testimonials-carousel"></li>
-                    </ol>
+                    {{--<ol class="carousel-indicators">--}}
+                        {{--<li class="active" data-slide-to="0" data-target="#testimonials-carousel"></li>--}}
+                        {{--<li data-slide-to="1" data-target="#testimonials-carousel"></li>--}}
+                        {{--<li data-slide-to="2" data-target="#testimonials-carousel"></li>--}}
+                        {{--<li data-slide-to="3" data-target="#testimonials-carousel"></li>--}}
+                        {{--<li data-slide-to="4" data-target="#testimonials-carousel"></li>--}}
+                        {{--<li data-slide-to="5" data-target="#testimonials-carousel"></li>--}}
+                    {{--</ol>--}}
 
 
                 </div>

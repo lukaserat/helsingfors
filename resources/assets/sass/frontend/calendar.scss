@@ -1,0 +1,111 @@
+
+@mixin block() {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+@mixin cell() {
+  display: inline-block;
+  width: (100/7)*1%;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.calendar-object {
+
+  @include block;
+  width: 340px;
+  font-size: 0.9rem;
+
+  .clndr {
+    @include animate-effect(0.3s ease-in-out 0.5s);
+    @include block;
+    opacity: 0;
+    height: 0px;
+    @include transform(translateY(-10px));
+    @include transition-delay(0s);
+    position: absolute;
+    z-index: 10;
+    top: 4px;
+    border-bottom: 7px solid #69a776;
+    background: #ddd;
+    &.active {
+      opacity: 1;
+      height: auto;
+      @include transform(translateY(0px));
+    }
+  }
+
+  .clndr-controls {
+    @include block;
+    background: #69A776;
+    > div {
+      width: 30%;
+      display: inline-block;
+      text-align: center;
+      padding: 8px 0px;
+      color: #fff;
+      @include animate-effect(0.3s);
+      &:hover {
+        background: darken(#69A776, 10%);
+        cursor: pointer;
+      }
+    }
+    > .month-bar {
+      width: 100% - (30% * 2);
+      background: darken(#69A776, 15%);
+      &:hover {
+        background: darken(#69A776, 15%);
+      }
+    }
+  }
+
+  .clndr-grid, .clndr-today-button {
+    @include block;
+    cursor: pointer;
+    @include animate-effect(0.3s);
+  }
+
+  .clndr-today-button {
+    @include cell;
+    width: 100%;
+  }
+
+  .clndr-grid {
+    > .days-of-the-week {
+      @include block;
+      > .header-day {
+        background: #97ce7f;
+        @include cell;
+      }
+    }
+    .days {
+      @include block;
+      background: #ebebeb;
+      > .day {
+        @include cell;
+        color: #212121;
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        @include animate-effect(0.3s);
+        &:not(.past):hover {
+          background: #97ce7f;
+        }
+        &.today {
+          background: #fff;
+          color: #333;
+        }
+      }
+      > .adjacent-month {
+        background: darken(#ebebeb, 5%);
+        color: rgba(0, 0, 0, 0.3);
+      }
+      > .past {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+
+}

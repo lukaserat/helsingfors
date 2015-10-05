@@ -35,6 +35,10 @@ foreach(trans('routes') as $key => $urls) {
     }
 }
 
+Route::controller('booking', 'BookingController', [
+    'postBooking' => 'booking.create'
+]);
+
 
 
 Route::group(['prefix'=>'sistema'], function() {
