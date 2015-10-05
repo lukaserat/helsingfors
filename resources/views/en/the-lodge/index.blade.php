@@ -53,7 +53,7 @@
 
                             <p>A refined cellar with selected Argentine wines accompanies the delights of a sophisticated regional cuisine.</p>
 
-                            <br><br>
+                            <br>
 
                             <h4 class="subtitle">Uniqueness:</h4>
                             <ul>
@@ -103,95 +103,7 @@
                 </div>
             </div>
 
-            <div class="activities-wrapper">
-
-                <h1 class="title">PATAGONIA LODGE ACTIVITIES</h1>
-                <div class="row">
-                    <div class="col-xs-3 item-wrapper">
-
-                        <a href="#">
-                            <div class="img-wrapper">
-                                <img src="{{asset('images/activities/laguna_azul_home.jpg')}}" alt="">
-                                <div class="mask mask-1"></div>
-                                <div class="mask mask-2"></div>
-                                <div class="caption-wrapper">
-                                    <h2>An Unforgettable Walk</h2>
-                                    <p>Enjoy a couple, with family or friends the charm of nature</p>
-                                </div>
-                            </div>
-
-                            <div class="caption-wrapper">
-                                <h2>Trekking or Horseback to Blue Lagoon</h2>
-                                <p>The walk is moderately difficult</p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="col-xs-3 item-wrapper">
-
-                        <a href="#">
-                            <div class="img-wrapper">
-                                <img src="{{asset('images/activities/cabalgata_condor_home.jpg')}}" alt="">
-                                <div class="mask mask-1"></div>
-                                <div class="mask mask-2"></div>
-                                <div class="caption-wrapper">
-                                    <h2>An exciting and fun horse ride</h2>
-                                    <p>For horse riders with great expertise</p>
-                                </div>
-                            </div>
-
-                            <div class="caption-wrapper">
-                                <h2>Horse ride to the Mirador del condor</h2>
-                                <p>The tour has a high river</p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="col-xs-3 item-wrapper">
-
-                        <a href="#">
-                            <div class="img-wrapper">
-                                <img src="{{asset('images/activities/laguna_del_morro_home.jpg')}}" alt="">
-                                <div class="mask mask-1"></div>
-                                <div class="mask mask-2"></div>
-                                <div class="caption-wrapper">
-                                    <h2>An adventure to experience nature</h2>
-                                    <p>A very long walk crossing landscapes of dreams.</p>
-                                </div>
-                            </div>
-
-                            <div class="caption-wrapper">
-                                <h2>Trekking to Laguna del Morro</h2>
-                                <p>The walk has a higher level of demand</p>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="col-xs-3 item-wrapper">
-
-                        <a href="#">
-                            <div class="img-wrapper">
-                                <img src="{{asset('images/activities/los_hermanos.png')}}" alt="">
-                                <div class="mask mask-1"></div>
-                                <div class="mask mask-2"></div>
-                                <div class="caption-wrapper">
-                                    <h2>Enjoy the tranquility</h2>
-                                    <p>To relax and marvel at nature</p>
-                                </div>
-                            </div>
-
-                            <div class="caption-wrapper">
-                                <h2>Trekking and horseback riding to the Estancia Los Hermanos</h2>
-                                <p>The ride has low difficulty</p>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
+            <br>
 
         </div>
 

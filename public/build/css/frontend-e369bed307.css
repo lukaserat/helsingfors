@@ -8580,6 +8580,11 @@ footer {
     text-transform: uppercase;
     color: #444;
     font-size: 1.2rem; }
+  .side-pictures > p {
+    color: #888;
+    font-size: 0.85em;
+    line-height: 1.5em;
+    margin-bottom: 2%; }
 
 /*# sourceMappingURL=main.css.map */
 
