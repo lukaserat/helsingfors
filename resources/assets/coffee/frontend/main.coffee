@@ -2,9 +2,10 @@ jQuery(document).ready ->
 
   $ = jQuery
 
-  window.BOOKING_DATE =
+  window.APP =
     startDate: moment()
     endDate: moment()
+    timeoutCal: 0
 
   # Booking response
   if $('[name="booking-response"]').length > 0
@@ -19,9 +20,17 @@ jQuery(document).ready ->
   f1 = ()->
     $calendar = $(@).parent().siblings('.calendar-object').children('.clndr')
     $('.calendar-object .clndr').removeClass('active')
+
     f2 = ()-> $calendar.addClass('active')
     setTimeout f2, 10
-    $calendar.on 'mouseleave', ()-> $calendar.removeClass('active')
+
+    f3 = ()-> $calendar.removeClass('active')
+
+    $calendar.on 'mousemove', ()-> clearTimeout(APP.timeoutCal)
+
+    $calendar.on 'mouseleave', ()->
+      clearTimeout(APP.timeoutCal)
+      APP.timeoutCal = setTimeout f3, 500
 
   if $('input.calendar').length > 0
     $('input.calendar').each ()-> $(@).on('click', f1)
@@ -33,10 +42,10 @@ jQuery(document).ready ->
         $parent = $(target.element).parents('.calendar-object')
         if not $element.hasClass 'past'
           if $parent.hasClass('cal1')
-            BOOKING_DATE.startDate = target.date
+            APP.startDate = target.date
             $('input[name="in_date"]').val(target.date.format('YYYY-MM-DD'))
           if $parent.hasClass('cal2')
-            BOOKING_DATE.endDate = target.date
+            APP.endDate = target.date
             $('input[name="out_date"]').val(target.date.format('YYYY-MM-DD'))
           $parent.children('.clndr').removeClass('active')
 

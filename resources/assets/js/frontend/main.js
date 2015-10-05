@@ -2,9 +2,10 @@
   jQuery(document).ready(function() {
     var $, $tpBanner, f1, fn;
     $ = jQuery;
-    window.BOOKING_DATE = {
+    window.APP = {
       startDate: moment(),
-      endDate: moment()
+      endDate: moment(),
+      timeoutCal: 0
     };
     if ($('[name="booking-response"]').length > 0) {
       fn = function() {
@@ -17,15 +18,22 @@
       setTimeout(fn, 200);
     }
     f1 = function() {
-      var $calendar, f2;
+      var $calendar, f2, f3;
       $calendar = $(this).parent().siblings('.calendar-object').children('.clndr');
       $('.calendar-object .clndr').removeClass('active');
       f2 = function() {
         return $calendar.addClass('active');
       };
       setTimeout(f2, 10);
-      return $calendar.on('mouseleave', function() {
+      f3 = function() {
         return $calendar.removeClass('active');
+      };
+      $calendar.on('mousemove', function() {
+        return clearTimeout(APP.timeoutCal);
+      });
+      return $calendar.on('mouseleave', function() {
+        clearTimeout(APP.timeoutCal);
+        return APP.timeoutCal = setTimeout(f3, 500);
       });
     };
     if ($('input.calendar').length > 0) {
@@ -40,11 +48,11 @@
           $parent = $(target.element).parents('.calendar-object');
           if (!$element.hasClass('past')) {
             if ($parent.hasClass('cal1')) {
-              BOOKING_DATE.startDate = target.date;
+              APP.startDate = target.date;
               $('input[name="in_date"]').val(target.date.format('YYYY-MM-DD'));
             }
             if ($parent.hasClass('cal2')) {
-              BOOKING_DATE.endDate = target.date;
+              APP.endDate = target.date;
               $('input[name="out_date"]').val(target.date.format('YYYY-MM-DD'));
             }
             return $parent.children('.clndr').removeClass('active');
