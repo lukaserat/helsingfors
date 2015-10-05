@@ -16,20 +16,20 @@
                         <div class="footer-box col-xs-3">
                             <h2 class="title">HELSINGFORS</h2>
                             <ul class="list-unstyled">
-                                <li><a href="../../eng/lodge.php">The Lodge</a></li>
-                                <li><a href="../../eng/history.php">History</a></li>
-                                <li><a href="../../eng/services.php">Services</a></li>
-                                <li><a href="../../eng/gourmet.php">Gourmet Kitchen</a></li>
+                                <li><a href="{{route('the-lodge.index')}}">The Lodge</a></li>
+                                <li><a href="{{route('the-lodge.index')}}">History</a></li>
+                                <li><a href="{{route('services.index')}}">Services</a></li>
+                                <li><a href="{{route('services.index')}}">Gourmet Kitchen</a></li>
                             </ul>
                         </div>
                         <div class="footer-box col-xs-3">
                             <h2 class="title">INFORMATION</h2>
                             <ul class="list-unstyled">
-                                <li><a href="../../eng/contact/contactus.php">Contact Us</a></li>
-                                <li><a href="../../eng/useful_info.php">Useful info</a></li>
-                                <li><a href="../../eng/transfer.php">Tranfers</a></li>
-                                <li><a href="../../eng/ecology-recicled.php">Ecology</a></li>
-                                <li><a href="http://www.helsingfors.com.ar/eng/sitemap.html" target="_blank">Sitemap</a></li>
+                                <li><a href="{{route('the-lodge.index')}}">Contact Us</a></li>
+                                <li><a href="{{route('the-lodge.index')}}">Useful info</a></li>
+                                <li><a href="{{route('the-lodge.index')}}">Tranfers</a></li>
+                                <li><a href="{{route('the-lodge.index')}}">Ecology</a></li>
+                                <li><a href="{{route('the-lodge.index')}}" target="_blank">Sitemap</a></li>
                             </ul>
                         </div>
                     </div>
