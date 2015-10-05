@@ -75,3 +75,14 @@
     }
   }
 }
+
+
+@mixin image-wrapper {
+  @include content-box;
+  .img-wrapper {
+    @include content-box;
+    img {
+      @include content-box;
+    }
+  }
+}

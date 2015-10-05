@@ -11,15 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get(trans('routes.home'), function() {
+Route::get(trans('routes.home'), ['as' => 'home', function() {
     $view = [app()->getLocale(), 'index'];
     return view(implode('.', $view));
-});
+}]);
 
 
 foreach(trans('routes') as $key => $urls) {
@@ -27,10 +22,10 @@ foreach(trans('routes') as $key => $urls) {
 
     foreach($urls as $view => $url) {
 
-        Route::get($url, function() use($view, $key) {
+        Route::get($url, ['as' => implode('.', [$key, $view]), function() use($view, $key) {
             $view = [app()->getLocale(), $key, $view];
             return view(implode('.', $view));
-        });
+        }]);
 
     }
 }

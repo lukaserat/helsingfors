@@ -183,7 +183,7 @@ footer {
       padding: 5px 15px;
       text-transform: uppercase;
       color: $linkFg;
-      &:hover {
+      &:hover, &:focus {
         color: $linkHover;
         background: $linkHoverBg;
         text-decoration: none;
@@ -504,6 +504,47 @@ footer {
     margin-bottom: 10px;
     @include page-box;
     color: $textColor;
+
+    > .title, > .subtitle {
+      color: #555;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      line-height: 1.2;
+      font-weight: normal;
+      margin-top: 0px;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    > .subtitle {
+      font-size: 1.1em;
+    }
+
+    > p, > ul > li {
+      color: #888;
+      font-size: 0.85em;
+      line-height: 1.5em;
+      margin-bottom: 2%;
+
+      &.intro {
+        font-size: 0.85em;
+        color: #555;
+        line-height: 1.5em;
+      }
+    }
+
+    > ul {
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+    @include image-wrapper;
+
+    .img-wrapper {
+      margin-bottom: 20px;
+    }
+
   }
 
 }
@@ -533,6 +574,21 @@ footer {
     text-align: center;
     padding: 18px 10px;
     color: #F1F2F2;
+  }
+}
+
+.side-pictures {
+  @include image-wrapper;
+  padding-top: 10px;
+  > ul > li {
+    @include content-box;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .photo-gallery {
+    text-transform: uppercase;
+    color: #444;
+    font-size: 1.2rem;
   }
 }
 

@@ -51,11 +51,11 @@
             </li><li class="wrapper nav-wrapper">
                 <ul class="list-inline">
                     <li role="presentation">
-                        <a href="#">Home</a></li><li role="presentation">
-                        <a href="#">The Lodge</a></li><li role="presentation">
-                        <a href="#">Activities</a></li><li role="presentation">
-                        <a href="#">Services</a></li><li role="presentation">
-                        <a href="#">Contact Us</a></li>
+                        <a href="{{route('home')}}">Home</a></li><li role="presentation">
+                        <a href="{{route('the-lodge.index')}}">The Lodge</a></li><li role="presentation">
+                        <a href="{{route('activities.index')}}">Activities</a></li><li role="presentation">
+                        <a href="{{route('services.index')}}">Services</a></li><li role="presentation">
+                        <a href="{{route('contact-us.index')}}">Contact Us</a></li>
                 </ul>
             </li>
         </ul>

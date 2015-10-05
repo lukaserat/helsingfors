@@ -8225,7 +8225,7 @@ footer {
       padding: 5px 15px;
       text-transform: uppercase;
       color: #FFFFFF; }
-      .nav-wrapper ul li > a:hover {
+      .nav-wrapper ul li > a:hover, .nav-wrapper ul li > a:focus {
         color: #79A0DB;
         background: #FFFFFF;
         text-decoration: none; }
@@ -8492,9 +8492,44 @@ footer {
     position: relative;
     display: block;
     width: 100%;
-    color: #333333; }
+    color: #333333;
+    position: relative;
+    display: block;
+    width: 100%; }
     .body-wrapper .text-content .container {
       width: 1170px; }
+    .body-wrapper .text-content > .title, .body-wrapper .text-content > .subtitle {
+      color: #555;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      line-height: 1.2;
+      font-weight: normal;
+      margin-top: 0px;
+      letter-spacing: -1px;
+      text-transform: uppercase; }
+    .body-wrapper .text-content > .subtitle {
+      font-size: 1.1em; }
+    .body-wrapper .text-content > p, .body-wrapper .text-content > ul > li {
+      color: #888;
+      font-size: 0.85em;
+      line-height: 1.5em;
+      margin-bottom: 2%; }
+      .body-wrapper .text-content > p.intro, .body-wrapper .text-content > ul > li.intro {
+        font-size: 0.85em;
+        color: #555;
+        line-height: 1.5em; }
+    .body-wrapper .text-content > ul li {
+      margin-bottom: 8px; }
+    .body-wrapper .text-content .img-wrapper {
+      position: relative;
+      display: block;
+      width: 100%; }
+      .body-wrapper .text-content .img-wrapper img {
+        position: relative;
+        display: block;
+        width: 100%; }
+    .body-wrapper .text-content .img-wrapper {
+      margin-bottom: 20px; }
 
 .box-trip-advisor {
   text-align: center;
@@ -8521,6 +8556,30 @@ footer {
     text-align: center;
     padding: 18px 10px;
     color: #F1F2F2; }
+
+.side-pictures {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 10px; }
+  .side-pictures .img-wrapper {
+    position: relative;
+    display: block;
+    width: 100%; }
+    .side-pictures .img-wrapper img {
+      position: relative;
+      display: block;
+      width: 100%; }
+  .side-pictures > ul > li {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px; }
+  .side-pictures .photo-gallery {
+    text-transform: uppercase;
+    color: #444;
+    font-size: 1.2rem; }
 
 /*# sourceMappingURL=main.css.map */
 

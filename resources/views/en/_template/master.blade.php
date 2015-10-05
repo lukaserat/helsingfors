@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="_token" content="{{ csrf_token() }}" />
-    <title>{{ trans('site.name') }}</title>
+    <title>@yield('page-title', trans('site.name'))</title>
     <meta name="description" content="@yield('meta_description', 'Default Description')">
     <meta name="author" content="@yield('author', 'Joseph Lacerna')">
     @yield('meta')
