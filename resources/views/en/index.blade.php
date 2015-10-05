@@ -23,9 +23,9 @@
 
                             <div class="first-line">
                                 <div class="form-group @if($errors->has('name')) has-error @endif">
-                                    <input name="name" type="text" class="form-control" placeholder="Name and Surname">
+                                    <input name="name"  value="{{old('name')}}" type="text" class="form-control" placeholder="Name and Surname">
                                 </div><div class="form-group @if($errors->has('email')) has-error @endif">
-                                    <input name="email" type="text" class="form-control" placeholder="Email">
+                                    <input name="email"  value="{{old('email')}}" type="text" class="form-control" placeholder="Email">
                                 </div>
                             </div>
                             <div class="second-line">
@@ -33,19 +33,19 @@
                                     <div class="form-group @if($errors->has('in_date')) has-error @endif">
                                         <div class="input-group">
                                             <span class="input-group-addon">IN</span>
-                                            <input name="in_date" type="text" class="calendar form-control" placeholder="YYYY/MM/DD">
+                                            <input name="in_date" value="{{old('in_date')}}" type="text" class="calendar form-control" placeholder="YYYY/MM/DD">
                                         </div>
                                         <div class="cal1 calendar-object"></div>
                                     </div><div class="form-group @if($errors->has('out_date')) has-error @endif">
                                         <div class="input-group">
                                             <span class="input-group-addon">OUT</span>
-                                            <input name="out_date" type="text" class="calendar form-control" placeholder="YYYY/MM/DD">
+                                            <input name="out_date" value="{{old('out_date')}}" type="text" class="calendar form-control" placeholder="YYYY/MM/DD">
                                         </div>
                                         <div class="cal2 calendar-object"></div>
                                     </div>
                                 </div><div class="group">
                                     <div class="form-group @if($errors->has('num_passengers')) has-error @endif">
-                                        <input name="num_passengers" type="text" class="form-control" placeholder="# Passengers">
+                                        <input name="num_passengers" value="{{old('num_passengers')}}" type="text" class="form-control" placeholder="# Passengers">
                                     </div><div class="form-group">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
