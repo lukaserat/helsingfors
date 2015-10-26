@@ -45,3 +45,14 @@ if ( ! function_exists('isEn'))
     }
 }
 
+if ( ! function_exists('isEnvIs'))
+{
+    /**
+     * Get the current locale
+     */
+    function isEnvIs($env='')
+    {
+        $env = (empty($env) ? 'production' : $env);
+        return ( $env == env('APP_ENV') );
+    }
+}

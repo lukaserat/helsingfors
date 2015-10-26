@@ -446,9 +446,32 @@ footer {
     }
   }
 
+  .carousel-control {
+    i {
+      position: absolute;
+      top: 20%;
+      left: 42%;
+    }
+
+    background: #000 none repeat scroll 0 0;
+    border-radius: 100px;
+    display: inline-block;
+    float: none;
+    font-size: 15px;
+    height: 25px;
+    line-height: 20px;
+    padding: 1px;
+    position: relative;
+    text-align: center;
+    width: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+  }
+
   .carousel-inner {
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     //> .carousel-indicators {
     //  bottom: -10px;
@@ -472,6 +495,8 @@ footer {
 
       > p {
         font-size: 1.725rem;
+        font-family: 'Times New Roman',Arial,sans-serif;
+        font-style: italic;
         color: #8f8f8f;
         text-align: center;
         position: relative;
@@ -598,7 +623,55 @@ footer {
   }
 }
 
+.upper-footer {
+  background: #EBEBEB;
+  text-align: center;
+  padding: 20px 0px;
+  .list-inline {
+    margin: 10px 0px;
+    > li {
+      vertical-align: middle;
+    }
+  }
+  h3 {
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+    color: #555;
+  }
+  span {
+    background: url("/images/sprites_translados.png") no-repeat;
+    width: 66px;
+    height: 50px;
+    display: block;
+    margin: 0px auto;
+
+    &.transfer-service {
+      background-position: -16px -8px;
+      width: 67px;
+    }
+    &.horseback-activity {
+      background-position: -27px -64px;
+      width: 45px;
+    }
+    &.trek-hike-activity {
+      background-position: -36px -121px;
+      width: 28px;
+    }
+    &.energy-cycle {
+      background-position: -34px -230px;
+      width: 37px;
+    }
+  }
+}
+
 // Customize rev slider
-//.tp-leftarrow.default {
-//  @include image-sprite(-10px -243px);
-//}
+.tp-leftarrow.default {
+  //background-image: url("images/img-sprite.png") !important;
+  //background-position: -10px -243px !important;
+  //background-repeat: no-repeat !important;
+}
+
+address {
+  font-size: 0.83rem;
+}

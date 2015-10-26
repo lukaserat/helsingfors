@@ -48,6 +48,15 @@
                         <small>Dwendell - San Francisco, California</small>
                     </div>
 
+                    <div class="text-center">
+                        <a class="left carousel-control" href="#testimonials-carousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="right carousel-control" href="#testimonials-carousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+
                     {{--<ol class="carousel-indicators">--}}
                         {{--<li class="active" data-slide-to="0" data-target="#testimonials-carousel"></li>--}}
                         {{--<li data-slide-to="1" data-target="#testimonials-carousel"></li>--}}

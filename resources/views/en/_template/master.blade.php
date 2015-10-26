@@ -53,6 +53,10 @@
     @yield('after-scripts-end')
 
     @include('includes.javascript-vars')
-    @include('includes.ga')
+
+
+    @if(isEnvIs()) {{-- Display only for production --}}
+        @include('includes.ga')
+    @endif
 </body>
 </html>

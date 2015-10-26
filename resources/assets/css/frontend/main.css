@@ -8448,9 +8448,28 @@ footer {
     .testimonials-wrapper .trip-advisor .img-wrapper {
       width: 320px;
       margin: 0px auto; }
+  .testimonials-wrapper .carousel-control {
+    background: #000 none repeat scroll 0 0;
+    border-radius: 100px;
+    display: inline-block;
+    float: none;
+    font-size: 15px;
+    height: 25px;
+    line-height: 20px;
+    padding: 1px;
+    position: relative;
+    text-align: center;
+    width: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1; }
+    .testimonials-wrapper .carousel-control i {
+      position: absolute;
+      top: 20%;
+      left: 42%; }
   .testimonials-wrapper .carousel-inner {
     padding-top: 20px;
-    padding-bottom: 50px; }
+    padding-bottom: 30px; }
     .testimonials-wrapper .carousel-inner > .item {
       position: relative;
       text-align: center;
@@ -8463,6 +8482,8 @@ footer {
         opacity: 1; }
       .testimonials-wrapper .carousel-inner > .item > p {
         font-size: 1.725rem;
+        font-family: 'Times New Roman',Arial,sans-serif;
+        font-style: italic;
         color: #8f8f8f;
         text-align: center;
         position: relative;
@@ -8585,5 +8606,40 @@ footer {
     font-size: 0.85em;
     line-height: 1.5em;
     margin-bottom: 2%; }
+
+.upper-footer {
+  background: #EBEBEB;
+  text-align: center;
+  padding: 20px 0px; }
+  .upper-footer .list-inline {
+    margin: 10px 0px; }
+    .upper-footer .list-inline > li {
+      vertical-align: middle; }
+  .upper-footer h3 {
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+    color: #555; }
+  .upper-footer span {
+    background: url("/images/sprites_translados.png") no-repeat;
+    width: 66px;
+    height: 50px;
+    display: block;
+    margin: 0px auto; }
+    .upper-footer span.transfer-service {
+      background-position: -16px -8px;
+      width: 67px; }
+    .upper-footer span.horseback-activity {
+      background-position: -27px -64px;
+      width: 45px; }
+    .upper-footer span.trek-hike-activity {
+      background-position: -36px -121px;
+      width: 28px; }
+    .upper-footer span.energy-cycle {
+      background-position: -34px -230px;
+      width: 37px; }
+
+address {
+  font-size: 0.83rem; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,37 @@
+<div class="upper-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <ul class="list-inline">
+                    <li><h3><strong>Transfer</strong> service</h3></li><li>
+                        <span class="transfer-service"></span>
+                    </li>
+                </ul>
+            </div><div class="col-xs-3">
+                <ul class="list-inline">
+                    <li><h3><strong>Horseback</strong> activity</h3></li><li>
+                        <span class="horseback-activity"></span>
+                    </li>
+                </ul>
+            </div><div class="col-xs-3">
+                <ul class="list-inline">
+                    <li><h3><strong>Trek/Hike</strong> activity</h3></li><li>
+                        <span class="trek-hike-activity"></span>
+                    </li>
+                </ul>
+            </div><div class="col-xs-3">
+                <ul class="list-inline">
+                    <li><h3><strong>Energy</strong> Cycle</h3></li><li>
+                        <span class="energy-cycle"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer>
+
     <div class="container">
         <div class="row">
             <div class="col-xs-9">
@@ -59,16 +92,29 @@
 
 
 
-
+                    @if(isEnvIs()) {{-- Display only for production --}}
                     <!-- Trip Advisor -->
                     <div class="box-trip-advisor">
                         <div id="TA_cdsratingsonlynarrow435" class="TA_cdsratingsonlynarrow">
                             <ul id="PEPYC1ccV5" class="TA_links lKJbV8uH9e">
                                 <li id="W43nAB020" class="CFGNMV25c"> <a target="_blank" href="http://www.tripadvisor.com/"><img src="//www.tripadvisor.com/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a> </li> </ul> </div> <script src="//www.jscache.com/wejs?wtype=cdsratingsonlynarrow&amp;uniq=435&amp;locationId=600085&amp;lang=en_US&amp;border=false&amp;display_version=2"></script>
                     </div>
+                    @endif
 
 
-
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-6 footer-box">
+                <div class="container-fluid">
+                    <ul class="list-unstyled">
+                        <li><a href="#"><strong>Patagonia Argentina | Parque Nacional Los Glaciares</strong></a></li>
+                        <li><a href="#"><strong>The Lodge:</strong> +54 11 - 52770195</a></li>
+                        <li><a href="#"><strong>Booking:</strong> +54 (9) 2966-675753</a></li>
+                        <li><a href="mailto:info@helsingfors.com.a">info@helsingfors.com.ar</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
