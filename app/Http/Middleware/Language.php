@@ -29,14 +29,14 @@ class Language implements Middleware
         // Make sure current locale exists.
         $locale = locale($request);
 
-        if (isEn($request->segment(1)))
-        {
-            $segments = $request->segments();
-            unset($segments[0]);
-            $segments = array_values($segments);
-            $url = implode('/', $segments) . ( $request->query() ? '?'. http_build_query($request->query()) : '' );
-            return $this->redirector->to( $url );
-        }
+//        if (isEn($request->segment(1)))
+//        {
+//            $segments = $request->segments();
+//            unset($segments[0]);
+//            $segments = array_values($segments);
+//            $url = implode('/', $segments) . ( $request->query() ? '?'. http_build_query($request->query()) : '' );
+//            return $this->redirector->to( $url );
+//        }
 
         $this->app->setLocale($locale);
 

@@ -47,15 +47,15 @@
         </div>
         <ul class="list-inline">
             <li class="wrapper logo-wrapper">
-                <img src="{{asset('images/helsingfors.svg')}}" alt="">
+                <a href="{{route('home')}}"><img src="{{asset('images/helsingfors.svg')}}" alt=""></a>
             </li><li class="wrapper nav-wrapper">
                 <ul class="list-inline">
                     <li role="presentation">
                         <a href="{{route('home')}}">Home</a></li><li role="presentation">
-                        <a href="{{route('the-lodge.index')}}">The Lodge</a></li><li role="presentation">
-                        <a href="{{route('activities.index')}}">Activities</a></li><li role="presentation">
-                        <a href="{{route('services.index')}}">Services</a></li><li role="presentation">
-                        <a href="{{route('contact-us.index')}}">Contact Us</a></li>
+                        <a href="{{route(locale() . '.the-lodge.index')}}">The Lodge</a></li><li role="presentation">
+                        <a href="{{route(locale() . '.activities.index')}}">Activities</a></li><li role="presentation">
+                        <a href="{{route(locale() . '.services.index')}}">Services</a></li><li role="presentation">
+                        <a href="{{route(locale() . '.contact-us.index')}}">Contact Us</a></li>
                 </ul>
             </li>
         </ul>

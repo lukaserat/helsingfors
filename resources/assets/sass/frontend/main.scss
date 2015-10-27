@@ -530,6 +530,14 @@ footer {
     @include page-box;
     color: $textColor;
 
+    > .other-activities-header {
+      color: #333;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      padding: 0 1%;
+      margin-bottom: 2%;
+    }
+
     > .title, > .subtitle {
       color: #555;
       margin-bottom: 20px;
@@ -568,6 +576,29 @@ footer {
 
     .img-wrapper {
       margin-bottom: 20px;
+    }
+
+    &.activity {
+      .title {
+        color: #00527e;
+        font-size: 1.6em;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .sub-title {
+        color: #333;
+        font-size: 1.5em;
+        margin-bottom: 1%;
+        text-transform: uppercase;
+      }
+      p {
+        color: #333;
+        font-size: 0.8125em;
+        line-height: 1.8em;
+        margin-bottom: 0px;
+      }
     }
 
   }
@@ -666,12 +697,92 @@ footer {
 }
 
 // Customize rev slider
-.tp-leftarrow.default {
-  //background-image: url("images/img-sprite.png") !important;
-  //background-position: -10px -243px !important;
-  //background-repeat: no-repeat !important;
+.tparrows {
+  background: none !important;
+  border-radius: 0px;
+  top: 40% !important;
+  width: 72px !important;
+  height: 128px !important;
+
+  &.default {
+    &:after {
+      width: 72px;
+      height: 128px;
+      background: url("/images/img-sprite.png") no-repeat -10px -243px !important;
+      position: absolute;
+      content: ' ';
+      left: 0px;
+      right: auto;
+    }
+    &.tp-rightarrow {
+      &:after {
+        background-position: -105px -243px !important;
+        right: 0px;
+        left: auto;
+      }
+    }
+  }
 }
+
+.shop-top {
+  @include page-box;
+  padding: 2% 0;
+}
+
+//.tp-leftarrow.default {
+//
+//
+//
+//  //background-position: -10px -243px !important;
+//  //background-repeat: no-repeat !important;
+//}
 
 address {
   font-size: 0.83rem;
+}
+
+.share {
+  position: relative;
+  display: block;
+  strong {
+    display: block;
+    color: #08080B;
+    font-weight: 700;
+    font-size: 0.8125em;
+    padding-bottom: 0.5em;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  ul.list-inline {
+    display: block;
+    > li > a {
+      display: block;
+      outline: none;
+      border: 1px solid #CACACA;
+      background: #FFF;
+      padding: 5px 10px;
+      font-size: 0.85em;
+      &:hover {
+        text-decoration: none;
+      }
+      &.twitter:hover {
+        color: #FFF;
+        background-color: #00AAF0;
+      }
+      &.facebook:hover {
+        color: #FFF;
+        background-color: #435F9F;
+      }
+      &.google:hover {
+        color: #FFF;
+        background-color: #E04B34;
+      }
+      &.pinterest:hover {
+        color: #FFF;
+        background-color: #CE1F21;
+      }
+
+    }
+  }
 }

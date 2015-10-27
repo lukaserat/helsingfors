@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col-xs-3 item-wrapper">
 
-                        <a href="#">
+                        <a href="{{route(locale() . '.activities.a')}}">
                             <div class="img-wrapper">
                                 <img src="{{asset('images/activities/laguna_azul_home.jpg')}}" alt="">
                                 <div class="mask mask-1"></div>
@@ -49,7 +49,7 @@
 
                     <div class="col-xs-3 item-wrapper">
 
-                        <a href="#">
+                        <a href="{{route(locale() . '.activities.b')}}">
                             <div class="img-wrapper">
                                 <img src="{{asset('images/activities/cabalgata_condor_home.jpg')}}" alt="">
                                 <div class="mask mask-1"></div>
@@ -70,7 +70,7 @@
 
                     <div class="col-xs-3 item-wrapper">
 
-                        <a href="#">
+                        <a href="{{route(locale() . '.activities.c')}}">
                             <div class="img-wrapper">
                                 <img src="{{asset('images/activities/laguna_del_morro_home.jpg')}}" alt="">
                                 <div class="mask mask-1"></div>
@@ -91,7 +91,7 @@
 
                     <div class="col-xs-3 item-wrapper">
 
-                        <a href="#">
+                        <a href="{{route(locale() . '.activities.d')}}">
                             <div class="img-wrapper">
                                 <img src="{{asset('images/activities/los_hermanos.png')}}" alt="">
                                 <div class="mask mask-1"></div>
@@ -114,7 +114,7 @@
                 <div class="row">
                     <div class="col-xs-3 item-wrapper">
 
-                        <a href="#">
+                        <a href="{{route(locale() . '.activities.e')}}">
                             <div class="img-wrapper">
                                 <img src="{{asset('images/activities/viento.jpg')}}" alt="">
                                 <div class="mask mask-1"></div>

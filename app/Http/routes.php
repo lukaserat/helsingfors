@@ -17,17 +17,25 @@ Route::get(trans('routes.home'), ['as' => 'home', function() {
 }]);
 
 
-foreach(trans('routes') as $key => $urls) {
-    if ($key == 'home') continue;
+foreach( array_keys(config('app.locales')) as $locale)
+{
+    Route::group(['prefix' => $locale], function () use($locale) {
 
-    foreach($urls as $view => $url) {
+        foreach(trans('routes') as $key => $urls)
+        {
+            if ($key == 'home') continue;
 
-        Route::get($url, ['as' => implode('.', [$key, $view]), function() use($view, $key) {
-            $view = [app()->getLocale(), $key, $view];
-            return view(implode('.', $view));
-        }]);
+            foreach($urls as $view => $url) {
 
-    }
+                Route::get($url, ['as' => implode('.', [$locale, $key, $view]), function() use($view, $key) {
+                    $view = [app()->getLocale(), $key, $view];
+                    return view(implode('.', $view));
+                }]);
+
+            }
+        }
+
+    });
 }
 
 Route::controller('booking', 'BookingController', [
