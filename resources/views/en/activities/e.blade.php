@@ -1,15 +1,15 @@
 @extends(implode('.', [locale(), '_template', 'master']))
 
 @section('page-title')
-    Actividades . Lodge Helsingfors | Lodge in Patagonia - Los Glaciares National Park - Lake Viedma, Santa Cruz, Argentina
+    Walk to the wind Peninsula > Lodge Helsingfors | Lodge in Patagonia - Los Glaciares National Park - Lake Viedma, Santa Cruz, Argentina
 @endsection
 
 @section('meta_description')
-    Entre las actividades y excursiones que tenemos opciones Helsingfors ofrece paseos a caballo, senderismo, pesca, fotografía, observación, entre otros.
+    Walk to the wind Peninsula, Vivi the immensity of one place, It is an easy and pleasant walk
 @endsection
 
 @section('meta')
-    <meta name="keywords" content="trekking, hikking, caballo, jinete del caballo, a caballo, senderismo, pesca, fotografía, observación, entre otros,, lodge in patagonia, luxury lodge in patagonia, los glaciares national park, hosteria helsingfors, parque nacional los glaciares, estancia helsingfors, lodge lake viedma,lodge el chalten, lodge el calafate, remote patagonian lodge, active travel, estancia patagonia, horseback riding in patagonia, patagonia trekking, trekking in patagonia, hiking in patagonia, guanaco sighting" />
+    <meta name="keywords" content="Walk to the wind Peninsula, Wind Peninsula, Punta del Viento, arm Moyano, Alfred Ramstrom, lodge in patagonia, luxury lodge in patagonia, los glaciares national park, hosteria helsingfors, parque nacional los glaciares, estancia helsingfors, lodge lake viedma,lodge el chalten, lodge el calafate, remote patagonian lodge, active travel, estancia patagonia, horseback riding in patagonia, patagonia trekking, trekking in patagonia, hiking in patagonia, guanaco sighting" />
 @endsection
 
 @section('content')
